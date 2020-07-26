@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-image: url('assets/7972.jpg');
+    background-size: cover;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+}

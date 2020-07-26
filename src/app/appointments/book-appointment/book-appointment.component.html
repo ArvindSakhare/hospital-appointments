@@ -1,0 +1,39 @@
+<div class="contact-title">
+    <h1>Hi Buddy!</h1><br>
+    <h2>Book your online Appointment today!</h2>
+</div>
+<form id="booking-form" (ngSubmit)="onSubmit()"[formGroup]="appointmentForm">
+   
+    <input 
+        name="name" 
+        class="form-control" 
+        type="text" 
+        placeholder="Patients Name" 
+        #name
+        formControlName="name">
+    <br>
+    <input 
+        name="age" 
+        class="form-control" 
+        type="number" 
+        placeholder="Patients Age" 
+        formControlName="age">
+    <br>
+    <input 
+        name="disease" 
+        class="form-control" 
+        type="text" 
+        placeholder="Disease type"
+        formControlName="disease">
+    <br>
+    <textarea 
+        name="description" 
+        class="form-control" 
+        placeholder="Describe your problem" 
+        rows="4" 
+        formControlName="description">
+    </textarea>
+    <br>
+    <input type="submit" class="form-control submit" value="Book Appointment">  
+    
+</form>

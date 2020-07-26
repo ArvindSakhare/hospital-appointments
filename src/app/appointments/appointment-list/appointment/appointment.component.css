@@ -1,0 +1,31 @@
+.appointment-select{
+    text-decoration: none;
+}
+.appointment-list
+{
+  margin-top: 4px;
+  text-align: justify;
+}
+.appointment-list ul
+{
+  display: inline-flex;
+  list-style: none;
+  color: black;    
+  background: rgba(0,100,0,0.1);
+}
+.appointment-list ul li 
+{
+  width: 200px;
+  margin: 5px;
+  padding: 2px;
+}
+.appointment-list ul li  a
+{
+  text-decoration: none;
+  color:black;
+}
+.appointment-list ul:hover
+{
+color: white;
+background: #2bab0d;
+}

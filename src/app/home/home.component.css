@@ -1,0 +1,31 @@
+.header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.header h1 {
+    color:#2bab0d;
+    font-size: 46px;
+    font-weight: 400;
+}
+.header p {
+    color: #2bab0d;
+    font-size: 24px;
+    font-weight: lighter;
+}
+.header button {
+    color: black;
+    background: rgba(0,100,0,0);
+    border: 1px solid black;
+    border-radius: 6px; 
+    padding: 18px 38px;
+    font-size: 16px;
+    margin-top: 40px;
+}
+.header button:hover{
+    background: #2bab0d;
+    color: #fff;
+
+}

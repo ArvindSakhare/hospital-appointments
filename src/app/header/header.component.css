@@ -1,0 +1,27 @@
+.menu-bar
+{
+  background: rgba(0,100,0,0.1);
+  text-align: center;
+}
+.menu-bar ul
+{
+  display: inline-flex;
+  list-style: none;
+  color: #fff;  
+}
+.active, .menu-bar ul li 
+{
+  width: 160px;
+  margin: 15px;
+  padding: 15px;
+}
+.menu-bar ul li  a
+{
+  text-decoration: none;
+  color:black;
+}
+.active
+{
+  background: #2bab0d;
+  border-radius: 3px;  
+}
