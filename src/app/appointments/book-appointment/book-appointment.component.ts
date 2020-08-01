@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AppointmentSerice } from '../appointment.service';
+import { AppointmentSerice, Appointment } from '../appointment.service';
 
 @Component({
   selector: 'app-book-appointment',
@@ -10,6 +10,8 @@ import { AppointmentSerice } from '../appointment.service';
 })
 export class BookAppointmentComponent implements OnInit {
   appointmentForm: FormGroup;
+  appointment: Appointment;
+  isBooked= false;
  
   constructor(private router: Router, private appointmentservice:AppointmentSerice) { }
 
@@ -17,6 +19,8 @@ export class BookAppointmentComponent implements OnInit {
     this.appointmentForm = new FormGroup({
       'name': new FormControl(null, Validators.required),
       'age': new FormControl(null, Validators.required),
+      'date': new FormControl(null),
+      'time': new FormControl(null),
       'disease': new FormControl(null),
       'description': new FormControl(null)
     });
@@ -24,10 +28,12 @@ export class BookAppointmentComponent implements OnInit {
 
   
   onSubmit() { 
+    this.appointment = this.appointmentForm.value;
     this.appointmentservice.addAppointment(this.appointmentForm.value);
-    this.appointmentForm.reset();    
-    console.log(this.appointmentservice.getAppointments());
-    this.router.navigate(['/appointments']);
+    this.isBooked = true;
+    console.log(this.appointmentForm.value.date);
+    console.log(this.appointmentForm.value.time);
+    this.appointmentForm.reset();
   }
 
 }

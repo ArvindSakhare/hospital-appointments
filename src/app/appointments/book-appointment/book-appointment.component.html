@@ -1,15 +1,18 @@
-<div class="contact-title">
+<div class="contact-title" *ngIf="!isBooked">
     <h1>Hi Buddy!</h1><br>
     <h2>Book your online Appointment today!</h2>
 </div>
-<form id="booking-form" (ngSubmit)="onSubmit()"[formGroup]="appointmentForm">
+<div class="contact-title" *ngIf="isBooked">
+    <h1>Congratulations!</h1><br>
+    <h2>Your Appointment booked successfully!</h2>
+</div>
+<form id="booking-form" (ngSubmit)="onSubmit()"[formGroup]="appointmentForm" *ngIf="!isBooked">
    
     <input 
         name="name" 
         class="form-control" 
         type="text" 
         placeholder="Patients Name" 
-        #name
         formControlName="name">
     <br>
     <input 
@@ -18,6 +21,19 @@
         type="number" 
         placeholder="Patients Age" 
         formControlName="age">
+    <br>
+    <input 
+        name="date" 
+        class="form-control date" 
+        type="date" 
+        placeholder="Select date"
+        formControlName="date">|
+    <input 
+        name="time" 
+        class="form-control time" 
+        type="time" 
+        placeholder="Select time"
+        formControlName="time">
     <br>
     <input 
         name="disease" 
@@ -34,6 +50,13 @@
         formControlName="description">
     </textarea>
     <br>
-    <input type="submit" class="form-control submit" value="Book Appointment">  
-    
+    <input type="submit" class="form-control submit" value="Book Appointment">      
 </form>
+<div class="summary" *ngIf="isBooked">
+    <label for="name">Name : </label> {{ appointment.name }}<br>
+    <label for="age">Age : </label> {{ appointment.age }} <br>
+    <label for="date">Date : </label> {{ appointment.date }} <br>
+    <label for="time">Time : </label> {{ appointment.time }} <br>
+    <label for="disease">Disease : </label> {{appointment.disease }} <br>
+    <label for="problem">Problem Description : </label> {{ appointment.description }}
+</div>

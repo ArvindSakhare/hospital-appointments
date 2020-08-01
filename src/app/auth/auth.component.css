@@ -9,7 +9,7 @@
     margin: 2% auto;
     background:rgba(0,100,0,0.1);
     padding: 5px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .button-box{
     width: 220px;
@@ -76,7 +76,4 @@ span{
 
 #login{
     left: 50px;
-}
-#register{
-    left: 450px;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/shared/user.service';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private userService:UserService) { }
+  isCurrentUserLoggedIn = false;
+  isCurrentUserAdmin = false;
+  ngDoCheck(){
+    this.isCurrentUserAdmin = this.userService.isCurrentUserAdmin;
+    this.isCurrentUserLoggedIn = this.userService.isCurrentUserLoggedIn;
+  }
   ngOnInit(): void {
   }
 

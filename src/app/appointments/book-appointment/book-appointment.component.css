@@ -40,3 +40,16 @@ form .submit{
     height: 50px;
     margin-top: 20px;
 }
+
+.summary {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 550px;
+    text-align: justify;
+}
+.time {
+    width: 180px;
+}
+.date {
+    width: 220px;
+}
