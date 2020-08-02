@@ -48,8 +48,8 @@ form .submit{
     text-align: justify;
 }
 .time {
-    width: 180px;
+    max-width: 150px;
 }
 .date {
-    width: 220px;
+    max-width: 230px;
 }

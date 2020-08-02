@@ -1,18 +1,18 @@
 .header {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    position: relative;
+    margin-top: max(20vw, 100px);
+    margin-left: 50vw;
     transform: translate(-50%, -50%);
     text-align: center;
 }
 .header h1 {
     color:#2bab0d;
-    font-size: 46px;
+    font-size: max(4vw, 18px);
     font-weight: 400;
 }
 .header p {
     color: #2bab0d;
-    font-size: 24px;
+    font-size:  max(2vw, 14px);
     font-weight: lighter;
 }
 .header button {

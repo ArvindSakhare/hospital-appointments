@@ -10,5 +10,6 @@ body{
     background-image: url('assets/7972.jpg');
     background-size: cover;
     font-family: sans-serif;
+    height: 100vh;
     background-repeat: no-repeat;
 }
